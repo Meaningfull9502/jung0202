@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Company', '2017', '2018'],
+          ['Apple', 39.8, 40.4],
+          ['Samsung', 20.8, 18.9],
+          ['Huawei', 7.7, 12.0],
+          ['Others', 10.5, 11.7]
+        ]);
+
+        var options = {
+          title: "Company performance",
+          subtitle: "Smartphone sale(percentage)"
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+  </head>
+  <body>
+    <div id="introduction" style="max-width: 800px; font-family: Verdana, Dotum; margin: auto; padding-bottom: 30px"> 
+       <h1>Company performance - smartphone sales</h1> 
+       <p>date: 2019-09-27</p> 
+       <p>name: 21400641 Junghoon Lim</p> 
+       <p>Introduction: This chart shows the company's smartphone sales</p> 
+       <p>Data: The data is from naver</p> 
+       <p>Source code of this page: https://news.naver.com/main/read.nhn?oid=001&aid=0010487827<p> 
+     </div>
+    <div id="barchart_material" style="max-width: 1200px; margin:auto; width: 1000px; height: 600px;"> 
+    </div>
+  </body>
+</html>
